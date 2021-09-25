@@ -20,12 +20,6 @@ export default function Home({ nowPlaying, user }) {
       <Heading text="Player" className="mt-10" />
       <Profile profile={user}/>
       <SpotifyPlayer playing={nowPlaying}/>
-   
-      {/* <AlbumList albums={newReleases?.albums.items} />
-
-      <Heading text={featuredPlaylists?.message} className="mt-16" />
-      <PlaylistList playlists={featuredPlaylists?.playlists.items} /> */}
-      
     </div>
     </Layout>
   );
