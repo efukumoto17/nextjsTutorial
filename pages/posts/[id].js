@@ -37,6 +37,6 @@ export default function Post({ postData }) {
        </article>
      </Layout>
    )
- }
+}
  
  

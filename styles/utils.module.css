@@ -51,3 +51,11 @@
    color: #666;
  }
  
+ .playerButton{
+  margin: 10px;
+}
+
+.playerBackgroud {
+  background-color: rgb(46, 161, 187);
+}
+ 

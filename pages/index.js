@@ -43,6 +43,13 @@ export default function Home({allPostsData}) {
             </small>
           </li>
           ))}
+          <li className={utilStyles.listItem} key={2020}>
+            <Link href={`/whatsPlaying/home`}>
+              <a>{"Spotify Player"}</a>
+            </Link>
+            <br />
+            
+          </li>
         </ul>
       </section>
     </Layout>
