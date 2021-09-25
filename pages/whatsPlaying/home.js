@@ -8,11 +8,13 @@ import { getGreeting } from "../../utils/spotify/getGreeting";
 import SpotifyWebApi from "spotify-web-api-js";
 import SpotifyPlayer from "../../components/spotify/Player";
 import Profile from "../../components/spotify/Profile";
+import Layout from "../../components/layout";
 
 export default function Home({ nowPlaying, user }) {
    console.log(user);
 
   return (
+    <Layout>
     <div className="w-full p-4">
       <h1 className="mb-5 text-3xl font-bold">Good {getGreeting()}</h1>
       <Heading text="Player" className="mt-10" />
@@ -25,21 +27,22 @@ export default function Home({ nowPlaying, user }) {
       <PlaylistList playlists={featuredPlaylists?.playlists.items} /> */}
       
     </div>
+    </Layout>
   );
 }
 
 export const getServerSideProps = async (ctx) => {
-   console.log("cont")
+  console.log("cont")
 
-   const nowPlaying = await customGet(
+  const nowPlaying = await customGet(
       "https://api.spotify.com/v1/me/player/currently-playing",
       ctx   
-   );
+  );
 
-   const user = await customGet(
+  const user = await customGet(
       "https://api.spotify.com/v1/me",
       ctx
-   );
+  );
 
 
   return { props: { nowPlaying, user } };
