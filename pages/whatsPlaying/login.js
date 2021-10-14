@@ -3,8 +3,8 @@ import { useSession, signIn, signOut } from "next-auth/client"
 export default function Login() {
    const handleLogin = () => {
       signIn("spotify", { 
-         // callbackUrl: "http://localhost:3000/whatsPlaying/home" 
-         callbackUrl: "http://evanfukumoto.com/whatsPlaying/home" 
+         callbackUrl: "http://localhost:3000/whatsPlaying/home" 
+         // callbackUrl: "http://evanfukumoto.com/whatsPlaying/home" 
       });
     };
 
