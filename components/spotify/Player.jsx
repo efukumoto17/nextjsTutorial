@@ -114,8 +114,8 @@ export default function SpotifyPlayer({  playing }) {
                      <img src={ nowPlaying.album?.images[0].url} style={{ height: 150 }}/>
                   </div>
                </div>
-               {/* {nowPlaying.name && 
-                <SongLyrics song={nowPlaying?.name + " " + nowPlaying.artists[0]?.name }/>} */}
+               {nowPlaying.name && 
+                <SongLyrics song={nowPlaying?.name + " " + nowPlaying.artists[0]?.name }/>}
             </Paper>
             </Box>
             {artistTopTracks?.length > 0 &&
